@@ -1,0 +1,17 @@
+server:
+  port: 7070
+
+
+spring:
+  application:
+    name: test-customer
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+
+test-provider01:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule #配置规则 随机
